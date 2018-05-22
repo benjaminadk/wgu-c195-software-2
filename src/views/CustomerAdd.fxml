@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="views.CustomerAddController">
+   <children>
+      <Label layoutX="224.0" layoutY="32.0" text="Add Customer">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="226.0" layoutY="86.0" />
+      <TextField fx:id="address" layoutX="226.0" layoutY="129.0" />
+      <TextField fx:id="country" editable="false" layoutX="360.0" layoutY="175.0" />
+      <TextField fx:id="zip" layoutX="107.0" layoutY="239.0" />
+      <TextField fx:id="phone" layoutX="360.0" layoutY="239.0" />
+      <ComboBox fx:id="city" layoutX="106.0" layoutY="175.0" onAction="#setCountry" prefWidth="150.0" />
+      <Label layoutX="172.0" layoutY="90.0" text="Name" />
+      <Label layoutX="160.0" layoutY="133.0" text="Address" />
+      <Label layoutX="71.0" layoutY="179.0" text="City" />
+      <Label layoutX="311.0" layoutY="179.0" text="Country" />
+      <Label layoutX="47.0" layoutY="243.0" text="Zip Code" />
+      <Label layoutX="315.0" layoutY="243.0" text="Phone" />
+   </children>
+</AnchorPane>

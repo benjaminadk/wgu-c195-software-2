@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="appointmentMain" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AppointmentMainController">
+   <children>
+      <TabPane fx:id="tabs" layoutX="231.0" layoutY="68.0" prefHeight="443.0" prefWidth="554.0" style="-fx-border-color: #000000;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="monthly" text="Appoinments Monthly">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="monthAptTable" layoutX="31.0" layoutY="51.0" prefHeight="333.0" prefWidth="491.0">
+                          <columns>
+                            <TableColumn fx:id="monthDescription" prefWidth="105.0" text="Description" />
+                              <TableColumn fx:id="monthContact" prefWidth="75.0" text="Contact" />
+                              <TableColumn fx:id="monthLocation" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="monthStart" prefWidth="120.0" text="Start" />
+                              <TableColumn fx:id="monthEnd" prefWidth="115.0" text="End" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="49.0" layoutY="17.0" text="Customer:" />
+                        <Label fx:id="monthCustomerLabel" layoutX="122.0" layoutY="17.0" text="None" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Appointments Weekly">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="weekAptTable" layoutX="31.0" layoutY="51.0" prefHeight="333.0" prefWidth="491.0">
+                          <columns>
+                            <TableColumn fx:id="weekDescription" prefWidth="105.0" text="Description" />
+                              <TableColumn fx:id="weekContact" prefWidth="75.0" text="Contact" />
+                              <TableColumn fx:id="weekLocation" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="weekStart" prefWidth="124.0" text="Start" />
+                              <TableColumn fx:id="weekEnd" prefWidth="110.0" text="End" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="49.0" layoutY="17.0" text="Customer:" />
+                        <Label fx:id="weekCustomerLabel" layoutX="122.0" layoutY="17.0" text="None" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TableView fx:id="customerTable" layoutX="9.0" layoutY="69.0" onMouseClicked="#handleCustomerClick" prefHeight="444.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="customerId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="customerName" prefWidth="121.66667175292969" text="Customer" />
+        </columns>
+      </TableView>
+      <Label layoutX="327.0" layoutY="18.0" text="Appointments">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="725.0" layoutY="607.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
+      <Button layoutX="256.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleAddButton" text="Add New Appointment" />
+      <Button layoutX="446.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleModifyButton" text="Modify Appointment" />
+      <Button layoutX="633.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Delete Appointment" />
+   </children>
+</AnchorPane>
